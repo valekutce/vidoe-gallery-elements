@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+<div class="container">
+
+    <div class="video-links-container">
+        <a href="images/video-1.mp4" class="video-links">01. click here to play the video</a>
+        <a href="images/video-2.mp4" class="video-links">02. click here to play the video</a>
+        <a href="images/video-3.mp4" class="video-links">03. click here to play the video</a>
+        <a href="images/video-4.mp4" class="video-links">04. click here to play the video</a>
+        <a href="images/video-5.mp4" class="video-links">05. click here to play the video</a>
+        <a href="images/video-6.mp4" class="video-links">06. click here to play the video</a>
+        <a href="images/video-7.mp4" class="video-links">07. click here to play the video</a>
+        <a href="images/video-8.mp4" class="video-links">08. click here to play the video</a>
+    </div>
+
+    <div class="video-container">
+        <video src="images/video-1.mp4" loop muted controls class="video"></video>
+    </div>
+
+</div>
+
+<script>
+
+document.querySelectorAll('.video-links').forEach(links =>{
+    links.addEventListener('click', (e) =>{
+        e.preventDefault();
+        var src = links.getAttribute('href');
+        document.querySelector('.video').src = src;
+        document.querySelector('.video').play();
+    });
+});
+
+</script>
+
+</body>
+</html>
